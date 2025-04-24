@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Video Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Smooth Scrolling & Highlight Active Section
+        function scrollToSection(sectionId) {
+            document.querySelectorAll(".nav-link").forEach(link => {
+                link.classList.remove("text-yellow-400");
+            });
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+            document.getElementById(`link-${sectionId}`).classList.add("text-yellow-400");
+        }
+    </script>
+</head>
+<body class="bg-[#0C0E1A] text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-bold text-white">Retro.fit</h1>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="sat6.html" id="link-home" class="nav-link hover:text-yellow-400" onclick="scrollToSection('home')">HOME</a></li>
+                <li><a href="sat6.html" id="link-about" class="nav-link hover:text-yellow-400" onclick="scrollToSection('about')">ABOUT</a></li>
+                <li><a href="#" id="link-video" class="nav-link hover:text-yellow-400" onclick="scrollToSection('video-courses')">VIDEO COURSES</a></li>
+            </ul>
+            <a href="login.html">
+            <button class="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-black">LOGIN</button>
+            </a>
+        </div>
+    </nav>
+
+   
+
+   
+    <!-- Video Courses Section -->
+    <section id="video-courses" class="py-20 mt-10">
+        <h2 class="text-4xl font-bold text-center text-gray-400">Video Courses</h2>
+        <p class="mt-2 text-center text-lg text-gray-300">Train with expert-led challenges & level up your fitness!</p>
+
+        <div class="container mx-auto px-5 mt-8">
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Full-Body Challenge -->
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                    <h2 class="text-2xl font-semibold text-gray-300">30-Day Full-Body Challenge</h2>
+                    <p class="mt-2 text-gray-300">A step-by-step guide to improving overall strength and endurance.</p>
+                    <div class="mt-4">
+                        <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/UBMk30rjy0o" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Fat Loss Challenge -->
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                    <h2 class="text-2xl font-semibold text-gray-300"> 7-Day Fat Loss Challenge</h2>
+                    <p class="mt-2 text-gray-300">Burn fat, increase stamina, and achieve your fitness goals.</p>
+                    <div class="mt-4">
+                        <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/ml6cT4AZdqI" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Abs & Core Challenge -->
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                    <h2 class="text-2xl font-semibold text-gray-300"> Abs & Core Strength Challenge</h2>
+                    <p class="mt-2 text-gray-300">Build core strength & visible abs in weeks.</p>
+                    <div class="mt-4">
+                        <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/1919eTCoESo" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Strength & Muscle Challenge -->
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                    <h2 class="text-2xl font-semibold text-gray-300">Strength & Muscle Gain Challenge</h2>
+                    <p class="mt-2 text-gray-300">Designed for muscle building & strength training.</p>
+                    <div class="mt-4">
+                        <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/2pLT-olgUJs" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Flexibility & Yoga Challenge -->
+                <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                    <h2 class="text-2xl font-semibold text-gray-300"> Flexibility & Yoga Challenge</h2>
+                    <p class="mt-2 text-gray-300">Enhance flexibility & mental wellness with yoga.</p>
+                    <div class="mt-4">
+                        <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/VaoV1PrYft4" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-10 mt-10 text-gray-900 bg-gray-100">
+        © 2025 Fitness & Sport Ideas | Keep Pushing Forward!
+    </footer>
+
+</body>
+</html>

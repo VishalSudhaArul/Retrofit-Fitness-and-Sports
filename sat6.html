@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Sport Ideas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            document.getElementById(id).classList.add("bg-yellow-200");
+            setTimeout(() => {
+                document.getElementById(id).classList.remove("bg-yellow-200");
+            }, 2000);
+        }
+    </script>
+<script>
+    function scrollToSection(sectionId) {
+        // Remove highlight from all nav links
+        document.querySelectorAll(".nav-link").forEach(link => {
+            link.classList.remove("text-yellow-400");
+        });
+
+        // Get section position and adjust for navbar height
+        const section = document.getElementById(sectionId);
+        const navbarHeight = document.querySelector("nav").offsetHeight;
+        const offsetTop = section.offsetTop - navbarHeight;
+
+        // Smooth scrolling
+        window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+
+        // Highlight the clicked nav link
+        document.getElementById(`link-${sectionId}`).classList.add("text-yellow-400");
+    }
+</script>
+
+</head>
+<body class="bg-gray-950">
+
+    <header class="bg-gray-950 text-gray-950 p-5 text-center text-3xl font-bold">
+        Fitness & Sport Ideas 
+    </header>
+
+<nav class=" text-gray-50 fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-md shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+        <h1 class="text-2xl font-bold text-white">Retro.fit</h1>
+        <ul class="flex space-x-8 text-lg">
+            <li><a href="sat6.html" class="hover:underline nav-link hover:text-yellow-400">HOME</a></li>
+            <li><a href="javascript:void(0);" id="link-about" class="nav-link hover:text-yellow-400 hover:underline" onclick="scrollToSection('about')">ABOUT</a></li>
+            <li><a href="javascript:void(0);" id="link-fitness" class="nav-link hover:text-yellow-400 hover:underline" onclick="scrollToSection('fitness')">FITNESS</a></li>
+            <li><a href="javascript:void(0);" id="link-sports" class="nav-link hover:text-yellow-400 hover:underline" onclick="scrollToSection('sports')">SPORTS</a></li>
+            <li><a href="store.php" class="hover:text-yellow-400 hover:underline">STORE</a></li>
+            <!--
+            <a href="#plans" onclick="scrollToSection('plans')">PLANS</a>
+            <a href="#contact" onclick="scrollToSection('contact')">CONTACT</a>
+            <a href="#blog" onclick="scrollToSection('blog')">BLOG</a>
+            -->
+           <!-- <li><a href="login.html" class="hover:underline nav-link hover:text-yellow-400">LOGIN</a></li> -->
+        </ul><a href="logout.php">
+        <button class="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-black">LOGOUT</button>
+        </a>
+    </div>
+</nav>
+
+    <body class="bg-black text-white">
+        <div class="relative w-full h-screen">
+            <img src="background-image.jpg" alt="Fitness" class="absolute w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center">
+                <h1 class="text-5xl font-bold text-red-50">WE ARE <br>
+                    
+                    
+                    <img src="RETRO LLW.png" class="h-40">
+                    
+                    
+                    
+                    <span class="text-yellow-400 text-9xl"></span></h1>
+                <p class="mt-4 text-lg text-red-50">A fitness movement that is worth breaking a sweat for</p>
+                <a href="#" class="mt-6 px-6 py-3 bg-red-500 text-white font-semibold rounded-full shadow-lg hover:bg-red-600">EXPLORE NOW</a>
+                <div class="mt-4 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="pt-24 px-6 text-gray-50">
+        <!-- Fitness Section -->
+        <section id="fitness" class="py-20">
+            <h2 class="text-5xl font-bold text-center">Fitness Activities</h2>
+            <p class="text-center mt-4 text-lg">Stay fit with expert guidance and a variety of workouts.</p>
+            <div class="mt-10 flex justify-center">
+                <img src="fitness-image.jpg" alt="Fitness" class="rounded-lg shadow-lg w-2/5 h-60">
+            </div>
+        </section>
+    </div>
+
+    <main class="container mx-auto p-5 text-white">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md">
+                <img src="fitness_workout.avif" alt="Workout" class="w-full rounded-lg mb-3">
+                <a href="workoutplans.html" class="hover:underline hover:text-blue-500">
+                <h2 class="text-lg font-semibold mb-2 underline">Workout Plans</h2>
+                </a>
+                <p>Discover workouts for all fitness levels, from beginner to advanced.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md">
+                <img src="nutrition_diet.jpg" alt="Nutrition" class="w-full rounded-lg mb-3">
+                <a href="nutrition.html" class="hover:underline hover:text-blue-500">
+                    <h2 class="text-lg font-semibold mb-2 underline">Nutrition & Diet Plans</h2>
+                </a>
+                <p>Get healthy meal plans and nutritional advice to complement your fitness routine.</p>
+            </div>
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md">
+                <img src="fitness_challenges.jpg" alt="Challenges" class="w-full rounded-lg mb-3">
+                <a href="challenges.html" class="hover:underline hover:text-blue-500">
+                    <h2 class="text-lg font-semibold mb-2 underline">Challenges Plans</h2>
+                </a>
+                <p>Join challenges and track your progress to stay motivated.</p>
+            </div>
+        </section>
+    </main>
+<br>
+<br>
+<div class="flex items-center justify-center ">
+    <div class="text-center ">
+        <a href="retro_bmi.php" class="text-3xl font-bold underline text-yellow-400 px-4 py-2 rounded hover:bg-red-500 transition">
+          BMI Calculator
+        </a>
+        <p class="mt-4 text-lg text-gray-100 max-w-xl mx-auto">
+          Welcome to the BMI Calculator. This tool helps you assess your body mass index based on your height and weight. 
+          Click the button above to get started and track your health journey!
+        </p>
+      </div>
+</div>
+
+<br>
+<br>
+    
+    <main class="container mx-auto p-5 text-gray-950">
+        <!-- About Section -->
+        <section id="about" class="container mx-auto p-5 bg-white rounded-lg shadow-md mt-5">
+            <h2 class="text-2xl text-center font-bold mb-3">Grow Your Fitness Journey with Us</h2>
+            <center> 
+                <img src="about_us.jpg" alt="Centered Image" class="w-3/5 h-auto max-h-[250px] rounded-lg mb-5"> 
+            </center>
+            <br>
+            <div class="grid md:grid-cols-3 gap-5">
+                <div class="p-5 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold">Get Fit Easily</h3>
+                    <p>No prior experience needed. Our platform guides you step-by-step.</p>
+                </div>
+                <div class="p-5 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold">Personalized Plans</h3>
+                    <p>Our expert trainers create workout and diet plans that fit your needs.</p>
+                </div>
+                <div class="p-5 bg-gray-100 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold">Stay Motivated</h3>
+                    <p>Join challenges, track progress, and get expert tips to keep going.</p>
+                </div>
+            </div>
+            <br><br>
+            <p>Welcome to Fitness & Sport Ideas, your go-to platform for achieving your health and fitness goals.</p>
+            <p>We offer personalized workout plans, professional guidance, and a variety of fitness challenges to keep you motivated. Whether you're a beginner or an advanced athlete, our platform has something for everyone.</p>
+            <p>Our expert trainers and nutritionists provide tailored programs to help you build strength, endurance, and a healthier lifestyle.</p>
+        </section>
+    
+   <!-- Our Services Section -->
+<section id="our-services" class="container mx-auto p-5 bg-white rounded-lg shadow-md mt-5 text-center">
+    <h2 class="text-2xl font-bold mb-3">Our Services</h2>
+    <p class="text-lg mb-5">Explore our range of services designed to help you achieve your fitness goals.</p>
+
+    <div class="flex flex-col items-center">
+        <!-- First Row -->
+        <div class="flex justify-center gap-10 w-full md:w-3/4 flex-wrap">
+            <div class="p-5 bg-gray-100 rounded-lg shadow-md w-2/5 text-center">
+                <h3 class="text-lg font-semibold">🏋️‍♂️ Video Courses</h3>
+                <p>Learn from expert trainers through guided video lessons.</p>
+                <img src="video_courses.jpg" alt="video-courses" class="w-full h-40 rounded-lg mb-3">
+                <a href="video-courses.html" onclick="scrollToSection('video-courses')" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+            <div class="p-5 bg-gray-100 rounded-lg shadow-md w-2/5 text-center">
+                <h3 class="text-lg font-semibold">💰 Plans & Pricing</h3>
+                <p>Choose from a variety of affordable fitness plans.</p>
+                <img src="plans&pricing.png" alt="Workout" class="w-full rounded-lg mb-3">
+                <a href="plans.php" onclick="scrollToSection('plans')" class="text-blue-500 hover:underline">View Plans</a>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="flex justify-center gap-10 w-full md:w-3/5 flex-wrap mt-5">
+            <div class="p-5 bg-gray-100 rounded-lg shadow-md w-2/5 text-center">
+                <h3 class="text-lg font-semibold">📞 Contact</h3>
+                <p>Get personalized coaching from professional trainers.</p>
+                <img src="contact.jpg" alt="Workout" class="w-full rounded-lg mb-3">
+                <a href="contact.php" onclick="scrollToSection('contact')" class="text-blue-500 hover:underline">Get in Touch</a>
+            </div>
+         <!--   <div class="p-5 bg-gray-100 rounded-lg shadow-md w-2/5 text-center">
+                <h3 class="text-lg font-semibold">📰 Latest Blog</h3>
+                <p>Stay updated with the latest fitness trends and tips.</p>
+                <a href="#blog" onclick="scrollToSection('blog')" class="text-blue-500 hover:underline">Read More</a>
+            </div> -->
+        </div>
+    </div>
+    </section>
+    </main>
+
+    <div class="pt-24 px-6 text-gray-50">
+        <section id="sports" class="py-20">
+            <h2 class="text-5xl font-bold text-center">Sports & Training</h2>
+            <p class="text-center mt-4 text-lg">Enhance your skills with specialized sports programs.</p>
+            <p class="text-center mt-4 text-lg">Improve your body control, strength, and performance with expert-guided sports training programs.</p>
+            <div class="mt-10 flex justify-center">
+                <img src="sports-image.jpg" alt="Sports" class="rounded-lg shadow-lg w-2/5 h-60">
+            </div>
+
+            <!-- Sports & Training Section -->
+<section id="sports" class="py-20 mt-10">   
+
+    <div class="container mx-auto px-5 mt-8">
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Strength Training -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                <h2 class="text-xl font-semibold text-gray-300 ">💪 Strength Training</h2>
+                <p class="mt-2 text-gray-300">Boost your power, endurance, and core stability with strength-focused exercises.</p>
+                <div class="mt-4">
+                    <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/VHyGqsPOUHs" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Agility & Speed Training -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                <h2 class="text-xl font-semibold text-gray-300">⚡ Agility & Speed Training</h2>
+                <p class="mt-2 text-gray-300">Enhance your quickness, reflexes, and movement efficiency.</p>
+                <div class="mt-4">
+                    <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/1fouvwilGWc" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Flexibility & Mobility -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                <h2 class="text-xl font-semibold text-gray-300">🧘 Flexibility & Mobility</h2>
+                <p class="mt-2 text-gray-300">Improve flexibility and range of motion to prevent injuries.</p>
+                <div class="mt-4">
+                    <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/g_tea8ZNk5A" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Endurance & Stamina Training -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                <h2 class="text-xl font-semibold text-gray-300">🏃 Endurance & Stamina</h2>
+                <p class="mt-2 text-gray-300">Increase your cardiovascular strength for longer-lasting performance.</p>
+                <div class="mt-4">
+                    <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/2pLT-olgUJs" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Sports Drills & Skill Training -->
+            <div class="bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition">
+                <h2 class="text-xl font-semibold text-gray-300">🏀 Sports-Specific Drills</h2>
+                <p class="mt-2 text-gray-300">Train like a pro with skill-specific drills for various sports.</p>
+                <div class="mt-4">
+                    <iframe class="w-full rounded-lg" height="200" src="https://www.youtube.com/embed/HLHhVyiOExA" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="turf-booking" class="py-20 text-center">
+        <a href="turf_booking.php" class="underline text-4xl font-bold text-yellow-400 hover:underline">
+            Turf Booking
+        </a>
+        <p class="text-gray-300 text-xl mt-2">
+            Improve your body control, strength, and performance with expert-guided sports training programs.
+        </p>
+        <p class="mt-2 text-xl text-gray-300">
+            Reserve your turf slot and enjoy your game.
+        </p>
+    </section>
+</section>
+
+<!--<body class="bg-slate-900 text-white"> -->
+    <div class="container mx-auto px-6 py-16 bg-slate-900">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+             
+            <div class="w-full md:w-1/2">
+                <img src="left-image.avif" alt="Yoga Pose" class="rounded-2xl shadow-lg">
+            </div>
+
+            <div class="absolute text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">
+                    One membership for all <br> your fitness needs
+                </h2>
+            </div>
+
+            <div class="w-full md:w-1/2">
+                <img src="right-image.jpg" alt="Workout Dance" class="rounded-2xl shadow-lg">
+            </div>
+        </div>
+    </div>
+<!-- </body> -->
+
+<footer class="bg-black text-white px-6 md:px-20 py-12">
+    <div class="grid md:grid-cols-4 gap-8">
+      
+      <!-- Logo and About -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <!-- Replace with your logo -->
+          <div class="text-3xl font-bold text-yellow-400">R⚡</div>
+          <span class="text-2xl font-semibold">Retro</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-300">
+          At Retro, we blend fitness with the excitement of sports to make workouts fun, food healthy & tasty, and wellness a lifestyle. #StayRetroStayFit
+        </p>
+      </div>
+  
+      <!-- Links Column 1 -->
+      <div class="text-sm space-y-3">
+        <p class="font-semibold text-white">Company</p>
+        <p>Retro for Business</p>
+        <p>Franchise</p>
+        <p>Corporate Partnerships</p>
+        <p>Retro Pass Network</p>
+        <p>t&c for business</p>
+      </div>
+  
+      <!-- Links Column 2 -->
+      <div class="text-sm space-y-3">
+        <p class="font-semibold text-white">Support</p>
+        <p>Partner.fit</p>
+        <p>Blogs</p>
+        <p>Security</p>
+        <p>Careers</p>
+        <p>Contact Us</p>
+      </div>
+  
+      <!-- Links Column 3 -->
+      <div class="text-sm space-y-3">
+        <p class="font-semibold text-white">More</p>
+        <br>
+        <a href="retro_bmi.php" class="hover:underline">Retro BMI Calculator</a>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+  
+       
+      </div>
+    </div>
+  
+    <!-- Social Icons -->
+    <div class="mt-10 flex justify-center space-x-6 text-gray-400 text-xl">
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

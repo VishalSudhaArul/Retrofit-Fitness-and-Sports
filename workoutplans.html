@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Plans - Fitness & Sport Ideas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+              function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            document.getElementById(id).classList.add("bg-yellow-200");
+            setTimeout(() => {
+                document.getElementById(id).classList.remove("bg-yellow-200");
+            }, 2000);
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-5 text-center text-xl font-bold">
+        Workout Plans
+    </header>
+    
+    <nav class="bg-blue-500 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <ul class="flex space-x-4">
+                <li><a href="sat6.html" class="hover:underline">Home</a></li>
+                <li><a href="sat6.html" onclick="scrollToSection('about')" class="hover:underline">About</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')" class="hover:underline">Contact</a></li>
+                <li><a href="login.html" class="hover:underline">Login</a></li>
+                <li><a href="login.html" class="hover:underline">Sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container mx-auto p-5">
+        <h1 class="text-2xl font-bold text-center mb-5">Choose Your Workout Plan</h1>
+        
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <img src="beginner_workout.jpg" alt="Beginner Workout" class="w-full rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2">Beginner Workout</h2>
+                <p>Start with easy exercises to build strength and endurance.</p>
+                <a href="beginner_workout.html" class="text-blue-500 hover:underline">View Details</a>
+            </div>
+            
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <img src="intermediate_workout.webp" alt="Intermediate Workout" class="w-full h-auto rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2">Intermediate Workout</h2>
+                <p>Take your fitness to the next level with moderate-intensity workouts.</p>
+                <a href="intermediate_workout.html" class="text-blue-500 hover:underline">View Details</a>
+            </div>
+            
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <img src="advanced_workout.webp" alt="Advanced Workout" class="w-full h-auto rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2">Advanced Workout</h2>
+                <p>High-intensity exercises for experienced fitness enthusiasts.</p>
+                <a href="advanced_workout.html" class="text-blue-500 hover:underline">View Details</a>
+            </div>
+        </section>
+    </main>
+
+    <section id="contact" class="container mx-auto p-5 bg-white rounded-lg shadow-md mt-5">
+        <h2 class="text-lg font-semibold mb-2">Contact Us</h2>
+        <img src="contact_us.jpg" alt="Contact Us" class="w-full rounded-lg mb-3">
+        <p>Email: support@fitnessideas.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Challenges - Fitness & Sport Ideas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleDetails(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body class="bg-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-950 text-white p-5 text-center text-xl font-bold">
+        Fitness Challenges
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="bg-gray-900 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <ul class="flex space-x-4">
+                <li><a href="sat6.html" class="hover:underline">Home</a></li>
+                <li><a href="workoutplans.html" class="hover:underline">Workout Plans</a></li>
+                <li><a href="nutrition.html" class="hover:underline">Nutrition & Diet</a></li>
+                <li><a href="challenges.html" class="hover:underline">Challenges</a></li>
+<!--               <li><a href="login.html" class="hover:underline">Login</a></li>
+                <li><a href="signup.html" class="hover:underline">Sign Up</a></li>
+-->
+            </ul>
+        </div>
+    </nav>
+<center>    
+    <!-- Challenges Section -->
+    <main class="container mx-auto p-5">
+        <h1 class="text-2xl font-bold text-center mb-5 text-white">Join a Fitness Challenge</h1>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
+            <!-- 30-Day Fitness Challenge -->
+            <div class="bg-gray-700 p-5 rounded-lg shadow-md">
+                <img src="30day_challenge.jpg" alt="30-Day Challenge" class="w-4/5 h-60 rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2 text-white">30-Day Fitness Challenge</h2>
+                <p class="text-white">A progressive workout plan to build endurance and strength.</p>
+                <button onclick="toggleDetails('challenge1')" class="text-blue-500 hover:underline">View Details</button>
+                <div id="challenge1" class="hidden mt-3">
+                    <ul class="list-disc pl-5 text-white">
+                        <li>Week 1: Light cardio & bodyweight exercises</li>
+                        <li>Week 2: Increase reps & duration</li>
+                        <li>Week 3: Introduce resistance training</li>
+                        <li>Week 4: High-intensity workouts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Weight Loss Challenge -->
+            <div class="bg-gray-700 p-5 rounded-lg shadow-md">
+                <img src="weight_loss_challenge.png" alt="Weight Loss Challenge" class="w-4/5 h-60 rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2 text-white">Weight Loss Challenge</h2>
+                <p class="text-white">Fat-burning workouts combined with healthy meal guidance.</p>
+                <button onclick="toggleDetails('challenge2')" class="text-blue-500 hover:underline">View Details</button>
+                <div id="challenge2" class="hidden mt-3">
+                    <ul class="list-disc pl-5 text-white">
+                        <li>Daily 20-minute HIIT workouts</li>
+                        <li>Nutrition tips for calorie control</li>
+                        <li>Tracking progress with weight & body fat percentage</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Strength Building Challenge -->
+            <div class="bg-gray-700 p-5 rounded-lg shadow-md">
+                <img src="strength_challenge.avif" alt="Strength Challenge" class="w-4/5 h-60 rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2 text-white">Strength Building Challenge</h2>
+                <p class="text-white">Focus on lifting & bodyweight exercises for power.</p>
+                <button onclick="toggleDetails('challenge3')" class="text-blue-500 hover:underline">View Details</button>
+                <div id="challenge3" class="hidden mt-3">
+                    <ul class="list-disc pl-5 text-white">
+                        <li>Progressive overload with weights</li>
+                        <li>Upper & lower body split workouts</li>
+                        <li>Strength measurement every 2 weeks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step Count Challenge -->
+            <div class="bg-gray-700 p-5 rounded-lg shadow-md">
+                <img src="step_challenge.jpg" alt="Step Challenge" class="w-4/5 h-60 rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2 text-white">Step Count Challenge</h2>
+                <p class="text-white">Daily walking/running challenge to boost heart health.</p>
+                <button onclick="toggleDetails('challenge4')" class="text-blue-500 hover:underline">View Details</button>
+                <div id="challenge4" class="hidden mt-3">
+                    <ul class="list-disc pl-5 text-white">
+                        <li>Start with 5,000 steps daily</li>
+                        <li>Increase by 1,000 steps each week</li>
+                        <li>Goal: 10,000 steps per day</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hydration Challenge -->
+            <div class="bg-gray-700 p-5 rounded-lg shadow-md">
+                <img src="hydration_challenge.webp" alt="Hydration Challenge" class="w-4/5 h-60 rounded-lg mb-3">
+                <h2 class="text-lg font-semibold mb-2 text-white">Hydration Challenge</h2>
+                <p class="text-white">Track and improve your daily water intake.</p>
+                <button onclick="toggleDetails('challenge5')" class="text-blue-500 hover:underline">View Details</button>
+                <div id="challenge5" class="hidden mt-3">
+                    <ul class="list-disc pl-5 text-white">
+                        <li>Week 1: 2L of water per day</li>
+                        <li>Week 2: Increase to 2.5L</li>
+                        <li>Week 3 & 4: Maintain 3L per day</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+        <a href="sat6.html" class="block mt-5 text-blue-500 hover:underline">Back to Home Page</a>
+        </section>
+    </main>
+</center>
+
+</body>
+</html>
